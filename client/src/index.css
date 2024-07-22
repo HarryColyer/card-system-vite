@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form {
+    @apply space-y-5 bg-slate-800 text-slate-100 flex justify-center flex-col w-full sm:max-w-80 px-6 py-12 shadow-md rounded-md border border-slate-400;
+}
+
+.input-text {
+    @apply px-2 w-full rounded-sm h-8 bg-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-400 required:ring-1 required:ring-red-700;
+}
+.form-btn {
+    @apply w-full  inline-block bg-purple-700 rounded-sm p-3 hover:bg-purple-600 transition-all ease-in mt-4;
+}

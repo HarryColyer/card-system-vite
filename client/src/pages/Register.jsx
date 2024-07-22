@@ -1,5 +1,8 @@
-import UserIcon from "../component/UserIcon";
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import UserIcon from "../component/UserIcon";
+import InputText from "../component/InputText";
 
 const Register = () => {
   return (
@@ -9,43 +12,22 @@ const Register = () => {
           <UserIcon />
         </Link>
       </div>
-      <form
-        action="#"
-        className="space-y-5 bg-slate-800 text-slate-100 flex justify-center flex-col w-full sm:max-w-80 p-9 rounded-sm shadow-md"
-      >
+      <form action="#" className="form">
         <h1 className="font-sans text-2xl font-semibold font-wide">Register</h1>
         <div className="space-y-1">
           <label htmlFor="name">Name</label>
-          <input
-            className="px-2 w-full rounded-sm h-8 bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-700"
-            type="text"
-            name="name"
-            id="name"
-          />
+          <InputText type="text" name="name"/>
         </div>
         <div className="space-y-1">
           <label htmlFor="email">Email</label>
-          <input
-            className="px-2 w-full rounded-sm h-8 bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-700"
-            type="text"
-            name="email"
-            id="email"
-          />
+          <InputText type="email" name="email" />
         </div>
         <div className="space-y-1">
           <label htmlFor="password">Password</label>
-          <input
-            className="px-2 w-full rounded-sm h-8 bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-700"
-            type="text"
-            name="password"
-            id="password"
-          />
+          <InputText type="password" name="password" />
         </div>
         <div className="mt-64">
-          <button
-            type="submit"
-            className="w-full  inline-block bg-green-600 rounded-sm p-3 hover:bg-green-700 transition-all ease-in mt-4"
-          >
+          <button type="submit" className="form-btn">
             Register
           </button>
         </div>
